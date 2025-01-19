@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Trainers - Mentor Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/g-logo.jpg" rel="icon">
+  <link href="assets/img/g-logo.jpg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ 
+</head>
+
+<body class="trainers-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Genius</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home<br></a></li>
+          <li class="dropdown"><a href="about.html">About Us <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html?#mission">Our Mission</a></li>
+              <li><a href="about.html?#vision">Our Vision</a></li>
+              <li><a href="about.html?#history">History</a></li>
+              <li><a href="about.html?#achivement">Achievements</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="academics.html" class="active">Academics <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul style="padding: 10px 10px;">
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'curriculum'})">Curriculum</p></li>
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'class-schedule'})">Class Schedule</p></li>
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'examination-system'})">Examination System</p></li>
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'student-support'})">Student Support</p></li>
+              <li class="dropdown"><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'atl-lab'})">ATL Lab</p>
+                <ul style="padding: 10px 10px">
+                  <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'atl-lab'})">Overview</p></li>
+                  <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'atl-lab'})">Objectives</p></li>
+                  <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'atl-lab'})">Lab Activities</p></li>
+                  <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'atl-lab'})">Projects</p></li>
+                  <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'atl-lab'})">Impact</p></li>
+                  <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'atl-lab'})">Facilities</p></li>
+                </ul>
+              </li>          
+            </ul>
+          </li>
+          <li class="dropdown"><a href="infrastructure.html">Infrastructure <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="infrastructure.html">Digital Classrooms</a></li>
+              <li><a href="infrastructure.html">Playground</a></li>
+              <li><a href="infrastructure.html">Transport Services</a></li>
+              <li><a href="infrastructure.html">CCTV & Safety</a></li>
+              <li><a href="infrastructure.html">Sports</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="activities.html">Activities <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="activities.html?#gymnastics">Gymnastics</a></li>
+              <li><a href="activities.html?#archery">Archery</a></li>
+              <li><a href="activities.html?#mallakhamb">Mallakhamb</a></li>
+              <li><a href="activities.html?#skating">Skating</a></li>
+              <li><a href="activities.html?#yoga">Yoga</a></li>
+              <li><a href="activities.html?#adventure-games">Adventure Games</a></li>
+              <li><a href="activities.html?#special-training">Special Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="faculty.html">Faculty <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="faculty.html?#meet-our-teachers">Meet Our Teachers</a></li>
+              <li><a href="faculty.html?#training-and-development">Training & Development</a></li>
+              <li><a href="faculty.html?#recuitment-process">Recruitment Process</a></li>
+            </ul>
+          </li>
+           <!-- <li class="dropdown"><a href="#">Co-curricular <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Lead School Program</a></li>
+              <li><a href="#">TeachNext Education</a></li>
+              <li><a href="#">Clubs & Societies</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Pedagogy</a>
+                <ul>
+                  <li><a href="#">Learner-Centered Approach</a></li>
+                  <li><a href="#">Inquiry-Based Learning</a></li>
+                  <li><a href="#">Technology Integration</a></li>
+                  <li><a href="#">Global Competence</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li> -->
+          <li><a href="contact.html">Contact Us</a>
+            <!-- <ul>
+              <li><a href="#">School Address</a></li>
+              <li><a href="#">Email Us</a></li>
+              <li><a href="#">Call Us</a></li>
+              <li><a href="#">Feedback Form</a></li>
+            </ul> -->
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="courses.html">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <!-- <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Trainers</h1>
+              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Academics</li>
+          </ol>
+        </div>
+      </nav>
+      <!-- <div class="page-title" data-aos="fade">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Trainers</h1>
+                <p class="mb-0">As academics, we understand the importance of having knowledgeable and experienced trainers to guide our students. Our trainers are experts in their respective fields and have extensive experience in teaching and mentoring. They bring a wealth of knowledge and practical experience to the classroom, enabling our students to learn and grow in a supportive and engaging environment. Our trainers are passionate about their work and are dedicated to helping our students achieve their full potential. We are proud to have such talented and dedicated individuals on our team, and we believe that their expertise will greatly enhance the learning experience of our students.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div><!-- End Page Title -->
+
+    <!-- academics Section -->
+    <section id="why-us" class="section why-us light-background" data-builder="section">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+           <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+             <h3><span>Academic Excellence</span><strong>Our Commitment to Quality Education</strong></h3>
+             <p>
+               At our institution, we are dedicated to providing a world-class education that prepares our students for success in their chosen fields. Our academic programs are designed to foster critical thinking, creativity, and problem-solving skills, and our experienced faculty are committed to helping our students achieve their full potential.
+             </p>
+           </div>
+
+            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+              <div class="faq-item faq-active" id="curriculum">
+                <h3><span>01</span> Curriculum</h3>
+                <div class="faq-content">
+                  <p>Genius English Medium School offers a comprehensive and well-structured curriculum that focuses on holistic development of students. Our curriculum is designed to foster academic excellence, creativity, and critical thinking skills.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              
+              <div class="faq-item" id="class-schedule">
+                <h3><span>02</span> Class Schedule</h3>
+                <div class="faq-content">
+                  <p>Our class schedule is designed to provide a balance between academic and extracurricular activities. We offer a flexible schedule that allows students to explore their interests and talents.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              
+              <div class="faq-item" id="examination-system">
+                <h3><span>03</span> Examination System</h3>
+                <div class="faq-content">
+                  <p>We have a fair and transparent examination system that evaluates students' knowledge and understanding of the subject matter. Our examination system is designed to promote academic excellence and prepare students for future challenges.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              
+              <div class="faq-item" id="student-support">
+                <h3><span>04</span> Student Support</h3>
+                <div class="faq-content">
+                  <p>We provide comprehensive support to our students, including academic guidance, counseling, and mentorship. Our experienced teachers and staff are committed to helping students achieve their full potential.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              
+              <div class="faq-item" id="atl-lab">
+                <h3><span>05</span> ATL Lab</h3>
+                <div class="faq-content">
+                  <p>Our ATL Lab is a state-of-the-art facility that provides students with hands-on experience in science, technology, engineering, and mathematics (STEM). Our lab is equipped with the latest technology and equipment, allowing students to explore and learn in a fun and interactive way.
+                    <ul>
+                      <li><strong>Overview:</strong> Our ATL Lab is designed to provide students with a comprehensive overview of STEM concepts and principles. Our lab is equipped with a range of equipment and software, allowing students to explore and learn in a hands-on way.</li>
+                      <li><strong>Objectives:</strong> The objectives of our ATL Lab are to provide students with a comprehensive understanding of STEM concepts and principles, to develop critical thinking and problem-solving skills, and to foster creativity and innovation.</li>
+                      <li><strong>Lab Activities:</strong> Our ATL Lab offers a range of activities and projects that allow students to explore and learn in a hands-on way. Our activities are designed to promote critical thinking, problem-solving, and creativity.</li>
+                      <li><strong>Projects:</strong> Our ATL Lab offers a range of projects that allow students to apply their knowledge and skills in a practical way. Our projects are designed to promote critical thinking, problem-solving, and creativity.</li>
+                      <li><strong>Impact:</strong> Our ATL Lab has a significant impact on students' learning outcomes, promoting critical thinking, problem-solving, and creativity. Our lab also provides students with hands-on experience in STEM concepts and principles.</li>
+                      <li><strong>Facilities:</strong> Our ATL Lab is equipped with state-of-the-art facilities, including the latest technology and equipment. Our lab provides students with a comprehensive and well-structured learning environment.</li>
+                    </ul>
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="assets/img/acadamics1.jpeg" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- academics Section -->
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Genius</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Kini Road</p>
+            <p>Peth Vadgaon, Bhadole</p>
+            <p>Kolhapur</p>
+            <p>Maharashtra 416112</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 98505 37322</span></p>
+            <p><strong>Email:</strong> <span>geniusenglishmediumschool@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="academics.html?#atl-lab">ATL Lab</a></li>
+            <li><a href="infrastructure.html">Facilities</a></li>
+            <li><a href="infrastructure.html?#sports">Sports</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="activities.html">Co-curricular</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>  
+    
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Contact us</h4>
+          <ul>
+            <li><a href="#">Digital Classrooms</a></li>
+            <li><a href="#">Library Services</a></li>
+            <li><a href="#">Robotics Education</a></li>
+            <li><a href="#">School Transport</a></li>
+            <li><a href="#">CCTV Surveillance</a></li>
+            <li><a href="#">Wi-Fi Connectivity</a></li>
+            <li><a href="#">Safe and Secure Campus</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h4>Our Newsletter</h4>
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-12">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center newsletter-form">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+        </div>
+    
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Genius</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by Swami Infotech</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

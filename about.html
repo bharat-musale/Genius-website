@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About - Mentor Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/g-logo.jpg" rel="icon">
+  <link href="assets/img/g-logo.jpg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+<script>
+  window.onload = function() {
+    const targetPosition = window.location.hash.replace('#', '');
+    if (targetPosition) {
+      scrollToMission({ targetPosition });
+    }
+  }
+
+  function scrollToMission({ targetPosition }) {
+    // Get the height of the fixed header
+    var headerHeight = document.querySelector('#header').offsetHeight;
+
+    // Get the position of the mission div relative to the top of the document
+    var missionDiv = document.querySelector("#" + targetPosition);
+    var missionDivTop = (missionDiv.getBoundingClientRect().top + window.pageYOffset - headerHeight) - 50;
+
+    console.log(missionDiv.getBoundingClientRect().top + window.pageYOffset - headerHeight,missionDivTop);
+    window.scrollTo({
+      top: missionDivTop,
+      behavior: 'smooth'
+    });
+
+    if (window.location.hash !== '#' + targetPosition) {
+      window.location.hash = targetPosition;
+      window.location.reload();
+    }
+  }
+</script>
+</head>
+
+<body class="about-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Genius</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home<br></a></li>
+          <li class="dropdown"><a href="about.html" class="active">About Us <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul style="padding: 10px 10px;">
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'mission'})">Our Mission</p></li>
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition: 'vision'})">Our Vision</p></li>
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'history'})">History</p></li>
+              <li><p style="cursor: pointer;" onclick="scrollToMission({targetPosition:'achievements'})">Achievements</p></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="academics.html">Academics <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+                   <li><a href="academics.html?#curriculum">Curriculum</a></li>
+              <li><a href="academics.html?#class-schedule">Class Schedule</a></li>
+              <li><a href="academics.html?#examination-system">Examination System</a></li>
+              <li><a href="academics.html?#student-support">Student Support</a></li>
+              <li class="dropdown"><a href="academics.html?#atl-lab">ATL Lab <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="academics.html?#atl-lab">Overview</a></li>
+                  <li><a href="academics.html?#atl-lab">Objectives</a></li>
+                  <li><a href="academics.html?#atl-lab">Lab Activities</a></li>
+                  <li><a href="academics.html?#atl-lab">Projects</a></li>
+                  <li><a href="academics.html?#atl-lab">Impact</a></li>
+                  <li><a href="academics.html?#atl-lab">Facilities</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="infrastructure.html">Infrastructure <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+               <li><a href="infrastructure.html">Digital Classrooms</a></li>
+              <li><a href="infrastructure.html">Playground</a></li>
+              <li><a href="infrastructure.html">Transport Services</a></li>
+              <li><a href="infrastructure.html">CCTV & Safety</a></li>
+              <li><a href="infrastructure.html">Sports</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="activities.html">Activities <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="activities.html?#gymnastics">Gymnastics</a></li>
+              <li><a href="activities.html?#archery">Archery</a></li>
+              <li><a href="activities.html?#mallakhamb">Mallakhamb</a></li>
+              <li><a href="activities.html?#skating">Skating</a></li>
+              <li><a href="activities.html?#yoga">Yoga</a></li>
+              <li><a href="activities.html?#adventure-games">Adventure Games</a></li>
+              <li><a href="activities.html?#special-training">Special Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="faculty.html">Faculty <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="faculty.html?#meet-our-teachers">Meet Our Teachers</a></li>
+              <li><a href="faculty.html?#training-and-development">Training & Development</a></li>
+              <li><a href="faculty.html?#recuitment-process">Recruitment Process</a></li>
+            </ul>
+          </li>
+           <!-- <li class="dropdown"><a href="#">Co-curricular <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Lead School Program</a></li>
+              <li><a href="#">TeachNext Education</a></li>
+              <li><a href="#">Clubs & Societies</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Pedagogy</a>
+                <ul>
+                  <li><a href="#">Learner-Centered Approach</a></li>
+                  <li><a href="#">Inquiry-Based Learning</a></li>
+                  <li><a href="#">Technology Integration</a></li>
+                  <li><a href="#">Global Competence</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li> -->
+          <li><a href="contact.html">Contact Us</a>
+            <!-- <ul>
+              <li><a href="#">School Address</a></li>
+              <li><a href="#">Email Us</a></li>
+              <li><a href="#">Call Us</a></li>
+              <li><a href="#">Feedback Form</a></li>
+            </ul> -->
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="courses.html">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>About Us<br></h1>
+              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">About Us<br></li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- About Us Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/about1.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Genius School - Empowering Young Minds</h3>
+            <p class="fst-italic">
+              At Genius School, we believe in the power of education to transform lives and shape the future. Our mission is to empower young minds and provide them with the tools and resources they need to succeed.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span> We offer a comprehensive curriculum that combines academic rigor with creativity, innovation, and critical thinking.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Our dedicated faculty and staff are committed to creating a supportive and inclusive learning environment that fosters the growth and development of our students.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span> Whether you're a student, parent, or educator, we invite you to join us on this journey of empowerment and transformation.</span></li>
+            </ul>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Us Section -->
+
+    <!-- Counts Section -->
+    <section id="counts" class="section counts light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Students</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Courses</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Events</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Trainers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Counts Section -->
+
+    <section id="legacy" class="legacy section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <!-- <h6>Established in 2002, Genius English Medium School has a rich history of providing quality education to its students.</h6> -->
+        <h2>Legacy</h2>
+        <p>Empowering Young Minds</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+    
+        <div id="vision" class="row gy-4 top-40 align-items-center legacy-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/vision.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <h1>Our Vision</h1>
+            <p class="fst-italic">
+              To empower young minds and provide them with the tools and resources they need to succeed in an ever-changing world.
+            </p>
+            <ul style="list-style-type: none;">
+              <li><i class="bi bi-check"></i><span> Provide a holistic education that focuses on the development of the whole child.</span></li>
+              <li><i class="bi bi-check"></i> <span> Foster a supportive and inclusive learning environment that promotes academic excellence and personal growth.</span></li>
+              <li><i class="bi bi-check"></i> <span> Encourage innovation, creativity, and critical thinking in all aspects of school life.</span></li>
+            </ul>
+          </div>
+        </div><!-- legacy Item -->
+    
+        <div id="mission" class="row gy-4 align-items-center legacy-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/mission.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h1>Our Mission</h1>
+            <p class="fst-italic">
+              To provide a comprehensive education that prepares students for success in all aspects of life.
+            </p>
+            <p>
+              We strive to create a supportive and inclusive learning environment that fosters academic excellence, personal growth, and social responsibility.
+            </p>
+          </div>
+        </div><!-- legacy Item -->
+    
+        <div id="achievements" class="row gy-4 align-items-center legacy-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/achievements.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h1>Our Achievements</h1>
+            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <ul style="list-style-type: none;">
+              <li><i class="bi bi-check"></i> <span> Consistently high academic results.</span></li>
+              <li><i class="bi bi-check"></i><span> Strong reputation for innovation and creativity.</span></li>
+              <li><i class="bi bi-check"></i> <span> Commitment to social responsibility and community service.</span></li>
+            </ul>
+          </div>
+        </div><!-- legacy Item -->
+    
+        <div id="history" class="row gy-4 align-items-center legacy-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/history.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+            <h1>Our History</h1>
+            <p class="fst-italic">
+              Established in 2002, Genius English Medium School has a rich history of providing quality education to its students.
+            </p>
+            <p>
+              We have consistently strived to provide a comprehensive education that prepares students for success in all aspects of life.
+            </p>
+          </div>
+        </div><!-- legacy Item -->
+    
+      </div>
+    
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>What are they saying</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Genius</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Kini Road</p>
+            <p>Peth Vadgaon, Bhadole</p>
+            <p>Kolhapur</p>
+            <p>Maharashtra 416112</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 98505 37322</span></p>
+            <p><strong>Email:</strong> <span>geniusenglishmediumschool@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="academics.html?#atl-lab">ATL Lab</a></li>
+            <li><a href="infrastructure.html">Facilities</a></li>
+            <li><a href="infrastructure.html?#sports">Sports</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="activities.html">Co-curricular</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>        
+    
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Contact us</h4>
+          <ul>
+            <li><a href="#">Digital Classrooms</a></li>
+            <li><a href="#">Library Services</a></li>
+            <li><a href="#">Robotics Education</a></li>
+            <li><a href="#">School Transport</a></li>
+            <li><a href="#">CCTV Surveillance</a></li>
+            <li><a href="#">Wi-Fi Connectivity</a></li>
+            <li><a href="#">Safe and Secure Campus</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h4>Our Newsletter</h4>
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-12">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center newsletter-form">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+        </div>
+    
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Genius</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by Swami Infotech</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
