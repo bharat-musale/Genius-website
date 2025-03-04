@@ -234,7 +234,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  /* max-height: 36px; */
   margin-right: 8px;
 }
 
@@ -652,7 +652,9 @@ h3.text-center {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  /* max-height: 40px; */
+  height: 120px;
+  width: 100%;
   margin-right: 6px;
 }
 
@@ -1006,7 +1008,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  background: color-mix(in srgb, var(--background-color), transparent 85%);
   position: absolute;
   inset: 0;
   z-index: 2;
